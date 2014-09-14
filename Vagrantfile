@@ -38,6 +38,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Our Postgres boxes use /data so we mimick that here
   config.vm.provision "shell" do |s|
-    s.inline = "mkdir -p /data && chmod 0777 /data"
+    s.inline = "mkdir -p /srv/emoji.xyz && chmod 0755 /srv/emoji.xyz"
   end
 end

@@ -1,0 +1,90 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+ body {
+ 	background: #262B2F;
+ 	color: #333;
+ 	font-size: 15px;
+ 	line-height: 20px;
+ 	font-style: normal;
+ 	font-weight: 400;
+ }
+
+ h1, h2, h3, h4, h5 {
+ 	font-family: Futura, Verdana, Sans-Serif;
+ 	font-weight: 700;
+ 	font-style: normal;
+ /*	text-transform: uppercase;*/
+ }
+
+ .content {
+ 	padding: 6px;
+ 	background: #DDD;
+ 	border-left: 1px solid rgba(39,39,39,0.75);
+ 	border-top: 1px solid rgba(39,39,39,0.75);
+ 	border-right: solid 1px rgba(39,39,39,0.75);
+ 	border-bottom: solid 1px rgba(39,39,39,0.75);
+ 	-moz-border-radius: 8px;
+ 	border-radius: 8px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+ }
+
+
+ input {
+     text-align: center;
+ }
+
+ #urlDestination {
+   visibility: hidden;
+ }
+
+ /* @group Footer */
+
+ #footer {
+ 	font-family: georgia, serif;
+ 	font-size: 13px;
+ 	line-height: 18px;
+ 	background: transparent;
+ 	color: #999;
+ 	margin: 0;
+ 	text-shadow: 1px 1px 1px #333;
+ }
+
+ #footer a, #footer a:link {
+ 	color: #ccc;
+ }
+
+ #footer a:hover {
+ 	color: #c6e9ff;
+ }
+
+ #copyright {
+ 	font-size: 12px;
+ 	padding: 10px 0 20px 0;
+ 	text-align: center;
+ }
+
+ #copyright p {
+ 	padding: 0;
+ }
+
+ /* @end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
