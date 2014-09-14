@@ -10,7 +10,8 @@
     "express": "^4.0.0",
     "coffee-script": "^1.8.0",
     "sqlite3": "^2.2.7",
-    "sequelize": "^1.7.10"
+    "sequelize": "^1.7.10",
+    "body-parser": "^1.8.1"
   },
   "engines": {
     "node": "0.10.x"

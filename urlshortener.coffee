@@ -1,4 +1,5 @@
-alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("")
+punycode = require('punycode')
+alphabet = "0x1F601,0x1F602,0x1F603,0x1F604,0x1F605,0x1F606".split(",")
 base = alphabet.length
 
 exports.encode = (i) ->
