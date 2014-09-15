@@ -1,10 +1,11 @@
 var punycode = require('punycode')
 var coffeescript = require('coffee-script/register')
 var urlshortener = require('./urlshortener')
-var sqlite = require("sqlite3");
-var Sequelize = require("sequelize")
+var sqlite = require('sqlite3');
+var Sequelize = require('sequelize')
 var express = require('express')
 var bodyParser = require('body-parser')
+var esrever = require('esrever')
 var app = express()
 
 var emojiUrl = 'http://localhost:5000/a/'
@@ -55,10 +56,8 @@ app.post('/shorten', function(request, response) {
     })
     .success(function() {
       var key = urlshortener.encode(urlObj.id)
-      var keyArray = key.match(/.{1,5}/g)
-      var emojis = punycode.ucs2.encode(keyArray)
       console.log('Got Shorten Request for ' + url + ' -> ' + key)
-      response.json({"link":emojiUrl + punycode.toASCII(emojis), "url":emojiUrl + emojis})
+      response.json({"link":emojiUrl + punycode.toASCII(key), "url":emojiUrl + key})
     })
 })
 
