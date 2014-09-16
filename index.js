@@ -14,7 +14,7 @@ var emojiUrl = 'http://localhost:5000/a/'
 var sequelize = new Sequelize('database', 'username', 'password', {
   // sqlite! now!
   dialect: 'sqlite',
-  storage: 'urls.sqlite3'
+  storage: 'db.sqlite3'
 });
 
 
@@ -40,10 +40,6 @@ app.set('port', (process.env.PORT || 5000))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'))
-
-app.get('/', function(request, response) {
-  response.send('Hello World!')
-})
 
 app.post('/shorten', function(request, response) {
  //var shortUrl = '😁';

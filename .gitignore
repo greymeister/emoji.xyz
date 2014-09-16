@@ -32,3 +32,4 @@ tags
 # ack crap
 .ackrc
 *.sqlite3
+/test/*.csv
