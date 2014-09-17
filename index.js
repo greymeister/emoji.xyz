@@ -24,7 +24,7 @@ Url = sequelize.define('Url', {
       autoIncrement: true,
       primaryKey: true
     },
-    url: Sequelize.STRING
+    url: Sequelize.TEXT
 });
 
 sequelize
@@ -44,13 +44,12 @@ app.use(express.static(__dirname + '/public'))
 app.post('/shorten', function(request, response) {
  //var shortUrl = '😁';
   var url = request.body.url
-  var urlObj = Url.build({url: url})
-  urlObj.save()
+  Url.findOrCreate({url: url})
     .error(function(err) {
       console.error('Failed saving record')
       response.status(500).json({status:500, message: 'internal error', type:'internal'})
     })
-    .success(function() {
+    .success(function(urlObj, created) {
       var key = urlshortener.encode(urlObj.id)
       console.log('Got Shorten Request for ' + url + ' -> ' + key)
       response.json({"link":emojiUrl + punycode.toASCII(key), "url":emojiUrl + key})
