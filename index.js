@@ -70,7 +70,12 @@ app.get('/a/:urlId', function(request, response) {
       //response.json({"shortUrl": url.id, "link":url.url})
       if(url == null) {
         console.error("Did not find url with id " + urlId)
-        response.status(404).json({status:404, message: 'Not found', type:'internal'})
+        // respond with html page
+         if (request.accepts('html')) {
+           response.redirect('/')
+           return
+         }
+        response.status(404).json({status:404, message: 'Not found'})
       } else {
         response.redirect(url.url)
       }
