@@ -77,7 +77,12 @@ app.get('/a/:urlId', function(request, response) {
          }
         response.status(404).json({status:404, message: 'Not found'})
       } else {
-        response.redirect(url.url)
+        // Prevent infinity and beyond!
+        if(url.url.indexOf(emojiUrl) > -1) {
+          response.redirect('/')
+        } else {
+          response.redirect(url.url)
+        }
       }
   })
 })
