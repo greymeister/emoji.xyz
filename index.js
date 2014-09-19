@@ -8,7 +8,7 @@ var bodyParser = require('body-parser')
 var esrever = require('esrever')
 var app = express()
 
-var emojiUrl = null == process.env.ENV_VARIABLE ? 'http://localhost:5000/a/' : process.env.ENV_VARIABLE;
+var emojiUrl = null == process.env.URL_DEST ? 'http://localhost:5000/a/' : process.env.URL_DEST;
 
 // DB Setup
 var sequelize = new Sequelize('database', 'username', 'password', {
