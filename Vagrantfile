@@ -35,9 +35,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
-
-  # Our Postgres boxes use /data so we mimick that here
-  config.vm.provision "shell" do |s|
-    s.inline = "mkdir -p /srv/emoji.xyz && chmod 0755 /srv/emoji.xyz"
-  end
 end
