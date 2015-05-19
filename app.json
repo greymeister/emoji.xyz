@@ -1,7 +1,7 @@
 {
   "name": "emoji.xyz",
   "description": "The silly url shortening service",
-  "repository": "https://github.com/heroku/node-js-sample",
+  "repository": "https://github.com/greymeister/emoji.xyz",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "express", "static"]
 }
