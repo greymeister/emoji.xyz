@@ -33,3 +33,7 @@ tags
 .ackrc
 *.sqlite3
 /test/jmeter*.csv
+/urlshortener.js
+/urlshortener.js.map
+/build
+
