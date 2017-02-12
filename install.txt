@@ -1,2 +1,0 @@
-mkdir -p build
-tar -zcf ./build/emoji-web.tar.gz --exclude=./.git --exclude=./build ./

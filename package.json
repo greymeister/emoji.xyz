@@ -14,7 +14,8 @@
     "esrever": "0.2.0",
     "express": "^4.0.0",
     "sequelize": "^3.30.2",
-    "sqlite3": "^3.1.8"
+    "sqlite3": "^3.1.8",
+    "purify-css": "^1.1.9"
   },
   "engines": {
     "node": "7.5.0"
