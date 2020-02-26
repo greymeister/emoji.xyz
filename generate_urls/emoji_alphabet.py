@@ -1,24 +1,17 @@
-punycode = require('punycode')
-esrever = require('esrever')
+def emojify(i):
+    if i == 0:
+        return get_code(i)
+    else:
+        s = ""
+        while i > 0:
+            s += get_code(i % base)
+            i = i // base
 
-get_code = (i) ->
-  return punycode.ucs2.encode([alphabet[i]])
+        return s[::-1]
 
-exports.encode = (i) ->
-  return get_code(i) if i is 0
-  s = ""
-  while i > 0
-    s += get_code(i % base)
-    i = parseInt(i / base, 10)
+def get_code(index):
+    return chr(alphabet[index])
 
-  esrever.reverse(s)
-
-exports.decode = (s) ->
-  i = 0
-  decoded = punycode.ucs2.decode(s)
-  for c in decoded
-    i = i * base + alphabet.indexOf c
-  i
 
 # [Emoji unicode characters for use on the web](http://apps.timwhitlock.info/emoji/tables/unicode)
 alphabet = [
@@ -274,7 +267,6 @@ alphabet = [
   0x1F306,
   0x1F307,
   0x1F308,
-  0x1F3009,
   0x1F30A,
   0x1F30B,
   0x1F30C,
@@ -728,4 +720,4 @@ alphabet = [
   0x1F5FE,
   0x1F5FF
 ]
-base = alphabet.length
+base = len(alphabet)
