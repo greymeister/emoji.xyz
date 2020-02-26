@@ -267,6 +267,7 @@ alphabet = [
   0x1F306,
   0x1F307,
   0x1F308,
+  0x1F309,
   0x1F30A,
   0x1F30B,
   0x1F30C,
@@ -720,4 +721,5 @@ alphabet = [
   0x1F5FE,
   0x1F5FF
 ]
+
 base = len(alphabet)
